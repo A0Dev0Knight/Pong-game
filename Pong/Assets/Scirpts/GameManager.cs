@@ -14,15 +14,29 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private Text ComputerScoreTxt;
+
+    [SerializeField]
+    Paddle PlayerPaddle;
+    
+    [SerializeField]
+    Paddle ComputerPaddle;
+
     public void PlayerScored() {
         _playerScore++;
         PlayerScoreTxt.text = _playerScore.ToString();
-        ball.ResetBallPoz();
+        InitGameParameters();
     }
     public void ComputerScored() {
         _computerScore++;
         ComputerScoreTxt.text = _computerScore.ToString();
-        ball.ResetBallPoz();
+        InitGameParameters();
     }
 
+    private void InitGameParameters()
+    {
+        ball.ResetBallPoz();
+        ball.AddStartingForce();
+        PlayerPaddle.ResetPoz();
+        ComputerPaddle.ResetPoz();
+    }
 }

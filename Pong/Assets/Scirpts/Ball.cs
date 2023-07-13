@@ -16,9 +16,10 @@ public class Ball : MonoBehaviour
     private void Start()
     {
         ResetBallPoz();
+        AddStartingForce();
     }
 
-    private void AddStartingForce()
+    public void AddStartingForce()
     {
         float x = UnityEngine.Random.value < .5f ? -1.0f : 1.0f;
         float y = UnityEngine.Random.value < .5f ? UnityEngine.Random.Range(-1.0f, -.5f) :
@@ -36,6 +37,5 @@ public class Ball : MonoBehaviour
     {
         _rbBall.position = Vector3.zero;
         _rbBall.velocity= Vector3.zero;
-        AddStartingForce();
     }
 }
