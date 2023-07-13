@@ -73,6 +73,11 @@ public class GameManager : MonoBehaviour
         {
             _isPaused = false;
             Time.timeScale = 1.0f;
+
+            if (_playerScore > PlayerPrefs.GetInt("HighScore", 0))
+            {
+                PlayerPrefs.SetInt("HighScore", _playerScore);
+            }
             SceneManager.LoadScene(0);
 
         }

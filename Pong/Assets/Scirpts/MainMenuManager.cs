@@ -23,6 +23,13 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField]
     Paddle Bot2Paddle;
 
+    [SerializeField]
+    Text HighScoreText;
+
+    private void Start()
+    {
+        UpdateHightScore();
+    }
     private void ResetRound()
     {
         Ball.ResetBallPoz();
@@ -41,5 +48,10 @@ public class MainMenuManager : MonoBehaviour
         _ScoreBot2++;
         Bot2ScoreText.text = _ScoreBot2.ToString();
         ResetRound();
+    }
+
+    void UpdateHightScore()
+    {
+        HighScoreText.text = $"High score: { PlayerPrefs.GetInt("HighScore", 0)}";
     }
 }
