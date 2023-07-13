@@ -25,7 +25,12 @@ public class PlayerPaddle : Paddle
 
     private void FixedUpdate()
     {
-        if(_direction.sqrMagnitude != 0)
+        Movement();
+    }
+
+    private void Movement()
+    {
+        if (_direction.sqrMagnitude != 0)
         {
             _rb.AddForce(_direction * Speed);
         }
