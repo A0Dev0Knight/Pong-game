@@ -1756,7 +1756,7 @@ PrefabInstance:
     - target: {fileID: 5728736822346308733, guid: 6487072f16127ef4d8242147651883b8,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: PlayDuoMode
       objectReference: {fileID: 0}
     - target: {fileID: 5728736822346308733, guid: 6487072f16127ef4d8242147651883b8,
         type: 3}

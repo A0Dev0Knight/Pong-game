@@ -14,4 +14,8 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
     }
+    public void PlayDuoMode()
+    {
+        SceneManager.LoadScene(2);
+    }
 }
