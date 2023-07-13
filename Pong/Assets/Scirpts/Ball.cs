@@ -15,7 +15,7 @@ public class Ball : MonoBehaviour
     }
     private void Start()
     {
-        AddStartingForce();
+        ResetBallPoz();
     }
 
     private void AddStartingForce()
@@ -32,4 +32,10 @@ public class Ball : MonoBehaviour
         _rbBall.AddForce(force);
     }
 
+    public void ResetBallPoz()
+    {
+        _rbBall.position = Vector3.zero;
+        _rbBall.velocity= Vector3.zero;
+        AddStartingForce();
+    }
 }
