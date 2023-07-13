@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -66,6 +67,14 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 1.0f;
             PauseText.enabled = false;
             _isPaused = false;
+        }
+
+        if (_isPaused == true && Input.GetKeyDown(KeyCode.Q))
+        {
+            _isPaused = false;
+            Time.timeScale = 1.0f;
+            SceneManager.LoadScene(0);
+
         }
     }
 }
