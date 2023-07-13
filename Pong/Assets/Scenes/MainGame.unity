@@ -645,7 +645,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10000
+  m_Text: 0
 --- !u!222 &936208617
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1033,7 +1033,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10000
+  m_Text: 0
 --- !u!222 &1326954582
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1086,6 +1086,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ball: {fileID: 860539479}
+  PlayerScoreTxt: {fileID: 1326954581}
+  ComputerScoreTxt: {fileID: 936208616}
+  PlayerPaddle: {fileID: 1204867137}
+  ComputerPaddle: {fileID: 1817813623}
 --- !u!1 &1395618557
 GameObject:
   m_ObjectHideFlags: 0

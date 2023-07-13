@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour
 {
     private int _playerScore;
     private int _computerScore;
+    private bool _isPaused = false;
 
     [SerializeField]
     private Ball ball;
@@ -21,6 +22,18 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     Paddle ComputerPaddle;
 
+    [SerializeField]
+    Text PauseText;
+
+    private void Awake()
+    {
+        PauseText.enabled = false;
+    }
+
+    private void Update()
+    {
+        Pause();
+    }
     public void PlayerScored() {
         _playerScore++;
         PlayerScoreTxt.text = _playerScore.ToString();
@@ -38,5 +51,21 @@ public class GameManager : MonoBehaviour
         ball.AddStartingForce();
         PlayerPaddle.ResetPoz();
         ComputerPaddle.ResetPoz();
+    }
+
+    private void Pause()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && _isPaused == false)
+        {
+            PauseText.enabled = true;
+            Time.timeScale = 0.0f;
+            _isPaused = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.Space) && _isPaused == true)
+        {
+            Time.timeScale = 1.0f;
+            PauseText.enabled = false;
+            _isPaused = false;
+        }
     }
 }
