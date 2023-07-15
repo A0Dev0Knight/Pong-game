@@ -1847,6 +1847,7 @@ MonoBehaviour:
   Bot2ScoreText: {fileID: 898146716}
   Bot1Paddle: {fileID: 5858793534046153616}
   Bot2Paddle: {fileID: 1404934211}
+  HighScoreText: {fileID: 964760714}
 --- !u!1 &1354666785
 GameObject:
   m_ObjectHideFlags: 0
